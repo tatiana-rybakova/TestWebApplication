@@ -1,0 +1,46 @@
+﻿@model EditEmployeeViewModel
+
+<body>
+    <form method="post" enctype="multipart/form-data">
+        <div asp-validation-summary="All"></div>
+        <h3>Редактировать данные</h3>
+        <input type="hidden" name="id" value="@Model.Id" />
+        <input type="hidden" name="departmentId" value="@Model.DepartmentId" />
+        <div>
+            <label asp-for="FirstName">Имя*</label>
+            <input asp-for="FirstName" />
+            <span asp-validation-for="FirstName" />
+        </div><br />
+        <div>
+            <label asp-for="SurName">Фамилия*</label>
+            <input asp-for="SurName" />
+            <span asp-validation-for="SurName" />
+        </div><br />
+        <div>
+            <label asp-for="Patronymic">Отчество</label>
+            <input asp-for="Patronymic" />
+            <span asp-validation-for="Patronymic" />
+        </div><br />       
+        <div>
+            <label asp-for="DateOfBirth">Дата рождения*</label>
+            <input type="date" value="2000-01-01" max="2005-01-01" min="1940-01-01" asp-for="DateOfBirth" />
+            <span asp-validation-for="DateOfBirth" />
+        </div><br />
+        <div>
+            <label asp-for="DocSeries">Серия документа</label>
+            <input asp-for="DocSeries" />
+            <span asp-validation-for="DocSeries" />
+        </div><br />
+        <div>
+            <label asp-for="DocNumber">Номер документа</label>
+            <input asp-for="DocNumber" />
+            <span asp-validation-for="DocNumber" />
+        </div><br />
+        <div>
+            <label asp-for="Position">Должность*</label>
+            <input asp-for="Position" />
+            <span asp-validation-for="Position" />
+        </div>
+        <button type="submit" asp-area="" asp-controller="employee" asp-action="edit">Сохранить</button>
+    </form>
+</body>

@@ -1,0 +1,50 @@
+﻿@if (Model.Departments.Count == 0 && Model.Employees.Count == 0)
+{
+    <h3>Список сотрудников пуст</h3>
+}
+else
+{
+    @if (Model.ParentDepartmentID != null)
+    {
+        <div>
+            <h4>@Model.Name</h4>
+        </div>
+        <br />
+    }
+    @if (Model.Employees.Count != 0)
+    {
+        <div><h3>Сотрудники</h3></div>
+        <ul>
+            @foreach (var employee in Model.Employees)
+            {
+
+                <li>
+                    <a asp-area="" asp-controller="employee" asp-action="employeeInfo" asp-route-employeeId="@employee.Id">@employee.FirstName @employee.SurName - @employee.Position</a>
+                </li>
+            }
+        </ul>
+    }
+    <br />
+    @if (Model.Departments.Count != 0)
+    {
+        <div><h3>Отделы</h3></div>
+        <br />
+        <ul>
+            @foreach (var department in Model.Departments)
+            {
+                <li> <a style="color:grey" asp-area="" asp-controller="employee" asp-action="index" asp-route-departmentId="@department.Id">@department.Name</a></li>
+            }
+        </ul>
+    }
+}
+<br />
+<a class="btn btn-dark" asp-area="" asp-controller="employee" asp-action="add" asp-route-departmentId=@Model.Id>Добавить сотрудника</a>
+<a class="btn btn-dark" asp-area="" asp-controller="home" asp-action="add" asp-route-departmentId=@Model.Id>Добавить отдел</a>
+<a class="btn btn-dark" asp-area="" asp-controller="home" asp-action="edit" asp-route-departmentId="@Model.Id">Редактировать отдел</a>
+
+@if (Model.ParentDepartmentID != null)
+{
+    <a class="btn btn-dark" class="btn btn-dark" asp-area="" asp-controller="home" asp-action="remove" asp-route-departmentId="@Model.Id">Удалить текущий отдел</a>
+}
+
+

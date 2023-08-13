@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KostaTestRybakovaWebApplication", "KostaTestRybakovaWebApplication\KostaTestRybakovaWebApplication.csproj", "{DBA46CE6-7C64-4C64-8ADF-82DF34B028B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KostaTestDb", "KostaTestDb\KostaTestDb.csproj", "{01900596-BDE8-4FA3-837A-CCE7958AD2D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBA46CE6-7C64-4C64-8ADF-82DF34B028B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBA46CE6-7C64-4C64-8ADF-82DF34B028B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBA46CE6-7C64-4C64-8ADF-82DF34B028B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBA46CE6-7C64-4C64-8ADF-82DF34B028B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01900596-BDE8-4FA3-837A-CCE7958AD2D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01900596-BDE8-4FA3-837A-CCE7958AD2D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01900596-BDE8-4FA3-837A-CCE7958AD2D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01900596-BDE8-4FA3-837A-CCE7958AD2D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E392A6FC-D6D0-4202-9CA7-143DD7A3D77B}
+	EndGlobalSection
+EndGlobal

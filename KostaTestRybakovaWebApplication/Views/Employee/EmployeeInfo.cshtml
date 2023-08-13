@@ -1,0 +1,27 @@
+﻿@model EmployeeViewModel
+
+<div><h3>@(Model.SurName + " " + Model.FirstName + " " + Model.Patronymic)</h3></div>
+
+<table class="table">
+    <thead></thead>
+    <tbody>       
+        <tr>
+            <th>Дата рождения</th>
+            <td>@Model.DateOfBirth.ToLongDateString()</td>
+        </tr>
+        <tr>
+            <th>Возраст</th>
+            <td>@Model.Age</td>
+        </tr>
+        <tr>
+            <th>Данные паспорта</th>
+            <td>@(Model.DocSeries + " " + Model.DocNumber)</td>
+        </tr>
+        <tr>
+            <th>Должность</th>
+            <td>@Model.Position</td>
+        </tr>
+    </tbody>
+</table>
+<a class="btn btn-dark" asp-area="" asp-controller="employee" asp-action="edit" asp-route-employeeId="@Model.Id">Редактировать</a>
+<a class="btn btn-dark" asp-area="" asp-controller="employee" asp-action="remove" asp-route-employeeId="@Model.Id">Удалить</a>
